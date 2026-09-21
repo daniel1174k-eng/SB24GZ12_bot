@@ -1,1 +1,1 @@
-web: python -m flask run --host=0.0.0.0 --port=$PORT & python -m telegram_bot
+web: python -m gunicorn --bind 0.0.0.0:$PORT bot:flask_app
