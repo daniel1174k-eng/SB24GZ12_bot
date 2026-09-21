@@ -291,3 +291,5 @@ def run_bot():
 
 bot_thread = threading.Thread(target=run_bot, daemon=True)
 bot_thread.start()
+if __name__ == "__main__":
+    flask_app.run(host="0.0.0.0", port=int(os.getenv("PORT", 8080)))
